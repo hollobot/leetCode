@@ -7,9 +7,41 @@ import java.util.Stack;
 public class Main {
 
     public static void main(String[] args) {
-        int[] ints = {1,2,3,4,5,1,1,1};
-        Quick.quickSort(ints,0,ints.length-1);
-        System.out.println(ints);
+        longestValidParentheses("(()");
+
+    }
+
+
+
+    public static int longestValidParentheses(String s) {
+        Deque<Integer> deque = new ArrayDeque();
+        int len = s.length();
+        int max = 0;
+        for(int i=0;i<len;i++){
+            char c = s.charAt(i);
+            if(c == '('){
+                deque.push(i);
+                continue;
+            }
+            if(deque.isEmpty()){
+                deque.push(i);
+                continue;
+            }
+            int index = deque.peek();
+            if(s.charAt(index)=='('){
+                deque.pop();
+                index = -1;
+                if(!deque.isEmpty()){
+                    index = deque.peek();
+                }
+                max = Math.max(max,i-index);
+                continue;
+            }
+
+            deque.push(i);
+        }
+
+        return max;
     }
 
     public String decodeString(String s) {

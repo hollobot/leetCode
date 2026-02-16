@@ -1,6 +1,9 @@
 package com.example;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 public class Main {
     // 3 -1 -5 : 1 = a1
@@ -9,6 +12,30 @@ public class Main {
     // 3 -1 -5 -9 -13 -17: 2*a3 +1 -a2
 
     public static void main(String[] args) {
+
+        Map<String, Integer> hashMap = new HashMap<>();
+        hashMap.put("apple", 5);
+        hashMap.put("banana", 3);
+        hashMap.get("apple");             // 获取值
+        hashMap.getOrDefault("orange", 0); // 获取值或默认值
+        hashMap.containsKey("apple");     // 判断是否包含键
+        hashMap.containsValue(5);         // 判断是否包含值
+        hashMap.remove("apple");          // 删除键值对
+        hashMap.size();                   // 获取大小
+        hashMap.isEmpty();                // 判断是否为空
+        hashMap.keySet();
+        hashMap.values();
+
+        // Java 8 新方法
+        hashMap.putIfAbsent("grape", 8);  // 如果不存在则添加
+        hashMap.merge("apple", 2, Integer::sum); // 合并值
+        hashMap.compute("banana", (k, v) -> v * 2); // 计算新值
+        hashMap.computeIfAbsent("orange", k -> 0); // 如果不存在则计算新值
+
+        // 比较 put、putIfAbsent、computeIfAbsent
+        Map<String, List<String>> map = new HashMap();
+        List<String> list1 = map.putIfAbsent("234", new ArrayList<>()); // null 存在返回存在的value，不存在返回null，与 put()方法返回一致
+        List<String> list2 = map.computeIfAbsent("234", v -> new ArrayList<>());  // [] 存在返回存在的value，不存在返回自己计算的属性
 
         int i = Main.fun1(new int[]{3,- 1,- 5,- 9,- 13,- 17});
         System.out.println(i);

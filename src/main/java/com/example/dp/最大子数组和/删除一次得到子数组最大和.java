@@ -1,9 +1,13 @@
-package com.example.dp;
+package com.example.dp.最大子数组和;
+
+import com.example.dp.Test;
+
+import java.util.concurrent.Callable;
 
 /**
  * https://leetcode.cn/problems/maximum-subarray-sum-with-one-deletion
  */
-public class 删除一次得到子数组最大和 {
+public class 删除一次得到子数组最大和 implements Runnable , Test, Callable<Integer> {
 
     public static void main(String[] args) {
         int[] a = new int[]{11,-10,-11,8,7,-6,9,4,11,6,5,0};
@@ -25,5 +29,20 @@ public class 删除一次得到子数组最大和 {
             ans = Math.max(ans, Math.max(dp1, dp2));
         }
         return ans;
+    }
+
+    @Override
+    public void run() {
+
+    }
+
+    @Override
+    public void test() {
+
+    }
+
+    @Override
+    public Integer call() throws Exception {
+        return 0;
     }
 }

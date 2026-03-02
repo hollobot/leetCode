@@ -3,21 +3,18 @@ package com.example.dp;
 public class Main {
 
     public static void main(String[] args) {
-        longestPalindrome("babad");
+
+        int bitLength = 32 - Integer.numberOfLeadingZeros(100000);
+        System.out.println(bitLength);
     }
 
     /**
      * 给你一个字符串 s，找到 s 中最长的 回文 子串。
      *
      *
-     * 示例 1：
-     * 输入：s = "babad"
-     * 输出："bab"
-     * 解释："aba" 同样是符合题意的答案。
+     * 示例 1： 输入：s = "babad" 输出："bab" 解释："aba" 同样是符合题意的答案。
      *
-     * 示例 2：
-     * 输入：s = "cbbd"
-     * 输出："bb"
+     * 示例 2： 输入：s = "cbbd" 输出："bb"
      */
 
     public static String longestPalindrome(String s) {

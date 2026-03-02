@@ -1,4 +1,4 @@
-package com.example.dp;
+package com.example.dp.打家劫舍;
 
 // https://leetcode.cn/problems/maximum-total-damage-with-spell-casting
 

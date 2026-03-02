@@ -1,4 +1,4 @@
-package com.example.dp;
+package com.example.dp.经典线性DP;
 
 import java.util.Arrays;
 

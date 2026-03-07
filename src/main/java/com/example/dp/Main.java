@@ -1,11 +1,17 @@
 package com.example.dp;
 
+import java.time.LocalDate;
+import java.time.temporal.ChronoUnit;
+
 public class Main {
 
     public static void main(String[] args) {
-
-        int bitLength = 32 - Integer.numberOfLeadingZeros(100000);
-        System.out.println(bitLength);
+        LocalDate startTime = LocalDate.of(2026, 2, 23);
+        LocalDate today = LocalDate.of(2026, 1, 2);
+        int operationDay = (int)ChronoUnit.DAYS.between(startTime, today);
+        System.out.println(operationDay);
+//        int bitLength = 32 - Integer.numberOfLeadingZeros(100000);
+//        System.out.println(bitLength);
     }
 
     /**

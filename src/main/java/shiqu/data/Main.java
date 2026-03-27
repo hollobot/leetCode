@@ -10,7 +10,7 @@ public class Main {
 
     public static void main(String[] args) {
 
-        runCase("同一天上班时间内",
+        runCase("同一天上班时间 内",
                 "2025-09-15 10:00:01",
                 "2025-09-22 10:00:01",
                 20 * 60);

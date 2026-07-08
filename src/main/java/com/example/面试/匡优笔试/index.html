@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <script>
+        //补全代码
+        //服务器地址：http://106.14.170.156:8083
+        const baseUrl = "http://106.14.170.156:8083";
+
+        async function login() {
+            try {
+                // 发送请求
+                const params = new URLSearchParams();
+                params.append('account', 'test');
+                params.append('password', '111111');
+
+                const res = await fetch(baseUrl + "/server", {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/x-www-form-urlencoded',
+                        'method': 'login'
+                    },
+                    body: params
+                });
+                // 获取数据
+                const data = await res.json();
+                document.getElementById("myDiv").innerHTML = JSON.stringify(data);
+            } catch (err) {
+                document.getElementById("myDiv").innerHTML = '请求失败';
+            }
+        }
+    </script>
+</head>
+<body>
+
+<div id="myDiv"><h2>登录结果</h2></div>
+<button type="button" onclick="login()">登录</button>
+
+</body>
+</html>
+
+

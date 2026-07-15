@@ -1,4 +1,6 @@
-package com.example.LeetCode75.二叉树;
+package com.example.LeetCode75.二叉树.深搜;
+
+import com.example.LeetCode75.二叉树.TreeNode;
 
 public class 二叉树中的最长交错路径 {
     private int max = 0;

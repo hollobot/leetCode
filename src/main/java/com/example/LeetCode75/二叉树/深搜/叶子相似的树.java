@@ -1,4 +1,6 @@
-package com.example.LeetCode75.二叉树;
+package com.example.LeetCode75.二叉树.深搜;
+
+import com.example.LeetCode75.二叉树.TreeNode;
 
 import java.util.ArrayList;
 import java.util.List;

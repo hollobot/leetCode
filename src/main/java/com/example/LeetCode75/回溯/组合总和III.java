@@ -5,8 +5,12 @@ import java.util.List;
 
 public class 组合总和III {
 
+
+
     public static void main(String[] args) {
-        new 组合总和III().combinationSum3(3, 7);
+
+        String s = "213dfk%$";
+        System.out.println(s.toUpperCase());
     }
 
     private List<List<Integer>> res;
